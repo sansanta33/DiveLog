@@ -13,11 +13,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class CampusDbHelper extends SQLiteOpenHelper {
+public class DiveDbHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "dive_notes.db";
     private static final int DB_VERSION = 4;
 
-    public CampusDbHelper(Context context) {
+    public DiveDbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 

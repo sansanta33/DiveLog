@@ -15,7 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private EditText usernameInput;
     private EditText passwordInput;
 
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         usernameInput = findViewById(R.id.etUsername);
         passwordInput = findViewById(R.id.etPassword);
         TextView loginButton = findViewById(R.id.btnLogin);

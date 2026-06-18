@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class SpotActivity extends AppCompatActivity {
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private SpotAdapter adapter;
     private long userId;
     private EditText searchInput;
@@ -28,7 +28,7 @@ public class SpotActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         userId = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).getLong(MainActivity.PREF_USER_ID, -1);
         searchInput = findViewById(R.id.etSpotSearch);
         TextView backButton = findViewById(R.id.btnSpotBack);

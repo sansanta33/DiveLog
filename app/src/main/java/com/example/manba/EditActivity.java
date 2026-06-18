@@ -15,7 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class EditActivity extends AppCompatActivity {
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private long userId;
     private EditText titleInput;
     private EditText locationInput;
@@ -39,7 +39,7 @@ public class EditActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         userId = getIntent().getLongExtra(MainActivity.EXTRA_USER_ID, -1);
         titleInput = findViewById(R.id.etTitle);
         locationInput = findViewById(R.id.etLocation);

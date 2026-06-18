@@ -21,7 +21,7 @@ public class NoteEditActivity extends AppCompatActivity {
     public static final String EXTRA_DIVE_ID = "dive_id";
     public static final String EXTRA_DIVE_TITLE = "dive_title";
 
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private long userId;
     private long noteId;
     private long diveId;
@@ -40,7 +40,7 @@ public class NoteEditActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         userId = getIntent().getLongExtra(MainActivity.EXTRA_USER_ID, -1);
         noteId = getIntent().getLongExtra(EXTRA_NOTE_ID, -1);
         diveId = getIntent().getLongExtra(EXTRA_DIVE_ID, 0);

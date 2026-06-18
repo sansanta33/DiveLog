@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class NoteActivity extends AppCompatActivity {
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private long userId;
     private NoteAdapter adapter;
     private TextView emptyView;
@@ -30,7 +30,7 @@ public class NoteActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         userId = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).getLong(MainActivity.PREF_USER_ID, -1);
         emptyView = findViewById(R.id.tvNotesEmpty);
         RecyclerView recyclerView = findViewById(R.id.recyclerNotes);

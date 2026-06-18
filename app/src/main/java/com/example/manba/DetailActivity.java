@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_ACTIVITY_ID = "activity_id";
 
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private long activityId;
     private ActivityItem activityItem;
 
@@ -27,7 +27,7 @@ public class DetailActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         activityId = getIntent().getLongExtra(EXTRA_ACTIVITY_ID, -1);
         loadActivity();
 

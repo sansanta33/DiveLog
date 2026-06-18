@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFS = "dive_prefs";
     public static final String PREF_USER_ID = "current_user_id";
 
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private long userId;
     private TextView subtitleView;
     private TextView recommendationView;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHelper = new CampusDbHelper(this);
+        dbHelper = new DiveDbHelper(this);
         userId = getSharedPreferences(PREFS, MODE_PRIVATE).getLong(PREF_USER_ID, -1);
         if (userId <= 0) {
             startActivity(new Intent(this, LoginActivity.class));

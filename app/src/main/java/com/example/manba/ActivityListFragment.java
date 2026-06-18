@@ -21,7 +21,7 @@ public class ActivityListFragment extends Fragment {
 
     private String filter;
     private long userId;
-    private CampusDbHelper dbHelper;
+    private DiveDbHelper dbHelper;
     private ActivityAdapter adapter;
     private TextView emptyView;
 
@@ -46,7 +46,7 @@ public class ActivityListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         filter = requireArguments().getString(ARG_FILTER, "全部");
         userId = requireArguments().getLong(ARG_USER_ID, -1);
-        dbHelper = new CampusDbHelper(requireContext());
+        dbHelper = new DiveDbHelper(requireContext());
         emptyView = view.findViewById(R.id.tvEmpty);
         RecyclerView recyclerView = view.findViewById(R.id.recyclerActivities);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
