@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/noteEditRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/page_padding"
+        android:paddingEnd="@dimen/page_padding">
+
+        <TextView
+            android:id="@+id/btnNoteBack"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_secondary_cta"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="编辑笔记"
+            android:textColor="@color/ink"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding">
+
+            <EditText
+                android:id="@+id/etNoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_field"
+                android:hint="笔记标题"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/ink"
+                android:textColorHint="@color/muted"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/spinnerMood"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_field"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+
+            <EditText
+                android:id="@+id/etNoteContent"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_field"
+                android:gravity="top"
+                android:hint="写下潜点路线、装备感受、训练复盘或下次计划"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="4dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/ink"
+                android:textColorHint="@color/muted"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btnDeleteNote"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/page_padding"
+        android:layout_marginEnd="@dimen/page_padding"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_outline_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="删除笔记"
+        android:textColor="@color/accent"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/btnSaveNote"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="@dimen/page_padding"
+        android:layout_marginEnd="@dimen/page_padding"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_cta"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="保存笔记"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>
